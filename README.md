@@ -6,7 +6,7 @@ CollegeCrib is a full-stack web application that helps students find PGs (Paying
 
 ## 🚀 Live Demo
 
-* 🌐 Frontend: https://your-frontend.vercel.app
+* 🌐 Frontend: https://collegecrib.onrender.com
 * 🔗 Backend API: https://collegecrib-backend.onrender.com
 
 ---
