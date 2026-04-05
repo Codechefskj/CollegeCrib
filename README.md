@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# 🏠 CollegeCrib
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CollegeCrib is a full-stack web application that helps students find PGs (Paying Guests) and allows property owners to list, manage, and track their properties easily.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+* 🌐 Frontend: https://your-frontend.vercel.app
+* 🔗 Backend API: https://collegecrib-backend.onrender.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React (Vite)
+* Axios
+* Tailwind CSS
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Node.js
+* Express.js
+* MongoDB (MongoDB Atlas)
+* Mongoose
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Other Tools
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Cloudinary (Image Upload)
+* JWT Authentication
+* Multer
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ✨ Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 👨‍🎓 Student
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Browse available PGs
+* Send booking requests
+* Receive notifications
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🏠 Owner
 
-## Learn More
+* Add new property
+* Upload property images
+* View personal property listings
+* Delete properties
+* Manage bookings
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔐 Authentication
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Secure JWT-based login/signup
+* Protected routes for authorized users
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📂 Project Structure
 
-### Analyzing the Bundle Size
+```
+CollegeCrib/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── services/
+│   └── main.jsx
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ⚙️ Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend (.env)
 
-### Advanced Configuration
+```
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_API_SECRET=your_secret
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### Frontend (.env)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+VITE_API_URL=https://collegecrib-backend.onrender.com/api
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```
+git clone https://github.com/Codechefskj/CollegeCrib.git
+cd CollegeCrib
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```
+cd backend
+npm install
+npm run dev
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🌐 Deployment
+
+### Frontend
+
+Deployed on Vercel
+
+### Backend
+
+Deployed on Render
+
+### Database
+
+Hosted on MongoDB Atlas
+
+---
+
+## 🔥 API Endpoints
+
+### Auth
+
+* POST /api/auth/register
+* POST /api/auth/login
+
+### Properties
+
+* GET /api/property
+* GET /api/property/my
+* POST /api/property
+* DELETE /api/property/:id
+
+---
+
+## ⚠️ Important Notes
+
+* Do NOT use localhost in production
+* Always use environment variables
+* JWT token is required for protected routes
+
+---
+
+## 👨‍💻 Author
+
+Sambhav Jha
+
+---
+
+## ⭐ Contribution
+
+Feel free to fork this repository and contribute!
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
