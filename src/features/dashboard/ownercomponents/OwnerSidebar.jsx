@@ -1,13 +1,22 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/AuthContext";
 
 function OwnerSidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { logout } = useContext(AuthContext);
 
   const navLinks = [
     { to: "/owner/dashboard", label: "Dashboard" },
     { to: "/owner/add-property", label: "Add Property" },
     { to: "/owner/properties", label: "My Properties" },
   ];
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   return (
     <div className="w-64 bg-[#020617] p-6 border-r border-gray-800 min-h-screen" style={{ display: "flex", flexDirection: "column" }}>
@@ -38,10 +47,7 @@ function OwnerSidebar() {
       </nav>
 
       <button
-        onClick={() => {
-          localStorage.removeItem("token");
-          window.location.href = "/login";
-        }}
+        onClick={handleLogout}
         className="text-red-400 hover:text-red-600"
         style={{ textAlign: "left", background: "none", border: "none", cursor: "pointer", fontSize: 14 }}
       >

@@ -6,6 +6,11 @@ function Navbar() {
   const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
   return (
     <div style={{
       display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -36,9 +41,9 @@ function Navbar() {
         </span>
       </div>
 
-      {/* Logout */}
+      {/* Sign Out */}
       <button
-        onClick={() => { logout(); navigate("/"); }}
+        onClick={handleLogout}
         style={{
           padding: "7px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500,
           color: "#ef4444", background: "rgba(239,68,68,0.08)",
